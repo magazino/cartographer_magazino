@@ -17,7 +17,7 @@
 Cartographer ROS for Magazino Robotics Platforms
 ================================================
 
-|build|
+|build| |license|
 
 Purpose
 =======
@@ -42,6 +42,11 @@ other platforms like SOTO may be added in the future.
 TORU
 ====
 
+We provide two `sample datasets`_ for mapping and localization that were
+recorded in a hallway. Use ``rosbag decompress`` to de-compress the bagfiles.
+
+.. _sample datasets: https://drive.google.com/drive/folders/1o685dyiueAfPPO5IxeMCFlXrqRalIuxO?usp=sharing
+
 Run the simulation demo (mapping) with the hallway dataset:
 
 .. code-block:: bash
@@ -55,13 +60,7 @@ Use the ``write_state`` ROS service to serialize the state to a ``.pbstream`` fi
 
   rosservice call /write_state "filename: 'hallway_return.pbstream'"
 
-Run the localization demo:
-
-.. code-block:: bash
-
-  roslaunch cartographer_toru demo_toru_localization.launch map_filename:=$(pwd)/hallway_return.pbstream bag_filename:=$(pwd)/hallway_localization.bag
-
-Run the offline node:
+If realistic timing is not critical, you can also use the faster offline node:
 
 .. code-block:: bash
 
@@ -69,6 +68,15 @@ Run the offline node:
 
 The offline node uses a lower grid resolution by default (see ``toru.lua``).
 
+Run the localization demo:
+
+.. code-block:: bash
+
+  roslaunch cartographer_toru demo_toru_localization.launch map_filename:=$(pwd)/hallway_return.pbstream bag_filename:=$(pwd)/hallway_localization.bag
 
 .. |build| image:: https://travis-ci.org/magazino/cartographer_magazino.svg?branch=master
     :target: https://travis-ci.org/magazino/cartographer_magazino
+.. |license| image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
+    :alt: Apache 2 license.
+    :scale: 100%
+    :target: https://github.com/magazino/cartographer_magazino/blob/master/LICENSE
