@@ -17,6 +17,8 @@
 Cartographer ROS for Magazino Robotics Platforms
 ================================================
 
+|build|
+
 Purpose
 =======
 
@@ -66,3 +68,7 @@ Run the offline node:
   roslaunch cartographer_toru offline_toru_2d.launch bag_filenames:=$(pwd)/hallway_return.bag
 
 The offline node uses a lower grid resolution by default (see ``toru.lua``).
+
+
+.. |build| image:: https://travis-ci.org/magazino/cartographer_magazino.svg?branch=master
+    :target: https://travis-ci.org/magazino/cartographer_magazino
