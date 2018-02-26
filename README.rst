@@ -47,7 +47,7 @@ track these datasets.
 TORU
 ====
 
-We provide two `sample datasets`_ for mapping and localization that were
+We provide two sample datasets for mapping and localization that were
 recorded in a hallway, you can find them in the ``datasets/toru`` directory.
 
 Run the simulation demo (mapping) with the hallway dataset:
