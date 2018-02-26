@@ -39,13 +39,16 @@ Documentation
 We currently support bagfiles recorded on Magazino TORU robots. Support for
 other platforms like SOTO may be added in the future.
 
+Test datasets are located in the ``datasets`` directory. We use `Git LFS`_ to
+track these datasets.
+
+.. _Git LFS: https://git-lfs.github.com/
+
 TORU
 ====
 
 We provide two `sample datasets`_ for mapping and localization that were
-recorded in a hallway. Use ``rosbag decompress`` to de-compress the bagfiles.
-
-.. _sample datasets: https://drive.google.com/drive/folders/1o685dyiueAfPPO5IxeMCFlXrqRalIuxO?usp=sharing
+recorded in a hallway, you can find them in the ``datasets/toru`` directory.
 
 Run the simulation demo (mapping) with the hallway dataset:
 
