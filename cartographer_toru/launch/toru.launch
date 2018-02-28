@@ -21,7 +21,6 @@
           -configuration_directory $(find cartographer_magazino)/configuration_files
           -configuration_basename toru.lua"
       output="screen">
-    <remap from="scan" to="/scan_aggregated" />
     <remap from="scan_1" to="/scan_front" />
     <remap from="scan_2" to="/scan_rear" />
     <remap from="imu" to="/imu/data_raw_transformed" />
