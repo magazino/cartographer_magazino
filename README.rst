@@ -39,16 +39,16 @@ Documentation
 We currently support bagfiles recorded on Magazino TORU robots. Support for
 other platforms like SOTO may be added in the future.
 
-Test datasets are located in the ``datasets`` directory. We use `Git LFS`_ to
-track these datasets.
+Download links for the public datasets of Magazino robots can be found on the 
+`Cartographer ROS Read the Docs site`_.
 
-.. _Git LFS: https://git-lfs.github.com/
+.. _Cartographer ROS Read the Docs site: https://google-cartographer-ros.readthedocs.io/en/latest/data.html#magazino
 
 TORU
 ====
 
 We provide two sample datasets for mapping and localization that were
-recorded in a hallway, you can find them in the ``datasets/toru`` directory.
+recorded in a hallway.
 
 Run the simulation demo (mapping) with the hallway dataset:
 
