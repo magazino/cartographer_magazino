@@ -23,6 +23,7 @@ options = {
   publish_frame_projected_to_2d = true,
   use_odometry = true,
   use_nav_sat = false,
+  use_landmarks = false,
   num_laser_scans = 2,
   num_multi_echo_laser_scans = 0,
   num_subdivisions_per_laser_scan = 16,
