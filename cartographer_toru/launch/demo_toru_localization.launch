@@ -21,7 +21,7 @@
       type="cartographer_node" args="
           -configuration_directory $(find cartographer_toru)/configuration_files
           -configuration_basename toru_localization.lua
-          -map_filename $(arg map_filename)"
+          -load_state_filename $(arg load_state_filename)"
       output="screen">
     <remap from="scan_1" to="/scan_front" />
     <remap from="scan_2" to="/scan_rear" />

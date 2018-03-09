@@ -75,7 +75,7 @@ Run the localization demo:
 
 .. code-block:: bash
 
-  roslaunch cartographer_toru demo_toru_localization.launch map_filename:=$(pwd)/hallway_return.pbstream bag_filename:=$(pwd)/hallway_localization.bag
+  roslaunch cartographer_toru demo_toru_localization.launch load_state_filename:=$(pwd)/hallway_return.pbstream bag_filename:=$(pwd)/hallway_localization.bag
 
 .. |build| image:: https://travis-ci.org/magazino/cartographer_magazino.svg?branch=master
     :target: https://travis-ci.org/magazino/cartographer_magazino
