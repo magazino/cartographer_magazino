@@ -24,7 +24,7 @@
   <node name="cartographer_offline_node" pkg="cartographer_ros"
       type="cartographer_offline_node" args="
           -configuration_directory $(find cartographer_toru)/configuration_files
-          -configuration_basenames toru.lua
+          -configuration_basename toru.lua
           -bag_filenames $(arg bag_filenames)"
       output="screen">
     <remap from="scan" to="/scan_aggregated" />
