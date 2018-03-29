@@ -83,3 +83,25 @@ Run the localization demo:
     :alt: Apache 2 license.
     :scale: 100%
     :target: https://github.com/magazino/cartographer_magazino/blob/master/LICENSE
+
+About Magazino
+==============
+
+Magazino is a robotics start-up based in Munich, Germany.
+We develop and build perception-controlled, mobile robots for intralogistics.
+`We are hiring`_!
+
+A video of TORU robots in action at one of our German customers:
+
+.. raw:: html
+
+  <div align="left">
+    <a href="https://www.youtube.com/watch?v=kj8NaHAoLJw">
+      <img src="https://img.youtube.com/vi/kj8NaHAoLJw/0.jpg"
+           title="Pick-by-Robot: warehouse automation with Magazino at FIEGE Logistik"
+           alt="Pick-by-Robot: warehouse automation with Magazino at FIEGE Logistik"
+      >
+    </a>
+  </div>
+
+.. _We are hiring: https://www.magazino.eu/jobs-2/?lang=en
