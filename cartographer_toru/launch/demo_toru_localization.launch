@@ -17,11 +17,14 @@
 
 <launch>
   <param name="/use_sim_time" value="true" />
+  <arg name="start_trajectory_with_default_topics" default="true" />
+
   <node name="cartographer" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory $(find cartographer_toru)/configuration_files
           -configuration_basename toru_localization.lua
-          -load_state_filename $(arg load_state_filename)"
+          -load_state_filename $(arg load_state_filename)
+          -start_trajectory_with_default_topics=$(arg start_trajectory_with_default_topics)"
       output="screen">
     <remap from="scan_1" to="/scan_front" />
     <remap from="scan_2" to="/scan_rear" />

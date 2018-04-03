@@ -35,7 +35,7 @@ options = {
   rangefinder_sampling_ratio = 1.,
   odometry_sampling_ratio = 1.,
   fixed_frame_pose_sampling_ratio = 1.,
-  imu_sampling_ratio = 1.,
+  imu_sampling_ratio = .5,
   landmarks_sampling_ratio = 1.,
 }
 
@@ -44,9 +44,10 @@ MAP_BUILDER.num_background_threads = 4
 TRAJECTORY_BUILDER_2D.use_imu_data = false
 
 TRAJECTORY_BUILDER_2D.submaps.resolution = 0.05
-TRAJECTORY_BUILDER_2D.submaps.num_range_data = 40
+TRAJECTORY_BUILDER_2D.submaps.num_range_data = 
+  1.0 * TRAJECTORY_BUILDER_2D.submaps.num_range_data
 TRAJECTORY_BUILDER_2D.max_range = 8.
-TRAJECTORY_BUILDER_2D.missing_data_ray_length = 3.
+TRAJECTORY_BUILDER_2D.missing_data_ray_length = 5.
 
 TRAJECTORY_BUILDER_2D.motion_filter.max_time_seconds = 60
 TRAJECTORY_BUILDER_2D.motion_filter.max_distance_meters = 0.05
@@ -57,9 +58,13 @@ TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
 TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.linear_search_window = .05
 TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.angular_search_window = math.rad(4.)
 
-POSE_GRAPH.optimization_problem.huber_scale = 10
-POSE_GRAPH.constraint_builder.min_score = .50
-POSE_GRAPH.constraint_builder.global_localization_min_score = .70
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 15
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 0.5
 
-POSE_GRAPH.optimization_problem.consecutive_node_translation_weight = 1e5
-POSE_GRAPH.optimization_problem.consecutive_node_rotation_weight = 1e4
+POSE_GRAPH.optimization_problem.huber_scale = 5
+POSE_GRAPH.constraint_builder.min_score = .6
+
+POSE_GRAPH.optimization_problem.local_slam_pose_translation_weight = 1e5
+POSE_GRAPH.optimization_problem.local_slam_pose_rotation_weight = 1e4
+POSE_GRAPH.optimization_problem.odometry_translation_weight = 1e5
+POSE_GRAPH.optimization_problem.odometry_rotation_weight = 1e1

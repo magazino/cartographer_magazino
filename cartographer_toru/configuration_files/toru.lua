@@ -21,7 +21,7 @@ toru = {
   use_3d = false,  -- Currently not supported in public integrations.
   use_imu = true,
   localization = false,
-  highres = false,
+  highres = true,
 }
 include "toru_compile.lua"
 

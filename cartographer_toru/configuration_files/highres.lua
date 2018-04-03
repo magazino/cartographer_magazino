@@ -12,5 +12,5 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
-POSE_GRAPH.constraint_builder.min_score = .6
 TRAJECTORY_BUILDER_2D.submaps.resolution = 0.025
+TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 400

@@ -20,14 +20,12 @@ if toru.use_3d then
   include "3d.lua"
 end
 
+if toru.highres then
+  include "highres.lua"
+end
+
 if toru.localization then
   include "localization.lua"
 else 
   include "mapping.lua"
 end
-
-if toru.highres then
-  include "highres.lua"
-end
-
-
