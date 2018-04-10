@@ -12,6 +12,7 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
-POSE_GRAPH.optimize_every_n_nodes = 40
-
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 5
+POSE_GRAPH.constraint_builder.max_constraint_distance = 1.5
+POSE_GRAPH.constraint_builder.sampling_ratio = 0.5
+POSE_GRAPH.global_sampling_ratio = 0.2
+POSE_GRAPH.optimize_every_n_nodes = 50
