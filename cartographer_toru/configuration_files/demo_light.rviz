@@ -33,7 +33,7 @@ Visualization Manager:
       Cell Size: 1
       Class: rviz/Grid
       Color: 160; 160; 164
-      Enabled: true
+      Enabled: false
       Line Style:
         Line Width: 0.0299999993
         Value: Lines
@@ -46,7 +46,7 @@ Visualization Manager:
       Plane: XY
       Plane Cell Count: 100
       Reference Frame: <Fixed Frame>
-      Value: true
+      Value: false
     - Class: rviz/TF
       Enabled: true
       Frame Timeout: 15
@@ -130,14 +130,13 @@ Visualization Manager:
       Use rainbow: true
       Value: true
     - Class: rviz/MarkerArray
-      Enabled: true
+      Enabled: false
       Marker Topic: /trajectory_node_list
       Name: MarkerArray
       Namespaces:
-        Trajectory 0: true
-        Trajectory 1: true
+        {}
       Queue Size: 100
-      Value: true
+      Value: false
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: /constraint_list
@@ -195,11 +194,11 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Scale: 60
-      Target Frame: map
+      Scale: 100
+      Target Frame: base_footprint
       Value: TopDownOrtho (rviz)
-      X: -0.00982521102
-      Y: 0.00446277671
+      X: 0
+      Y: 0
     Saved: ~
 Window Geometry:
   Displays:

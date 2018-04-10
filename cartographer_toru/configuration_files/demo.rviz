@@ -33,7 +33,7 @@ Visualization Manager:
       Cell Size: 1
       Class: rviz/Grid
       Color: 160; 160; 164
-      Enabled: true
+      Enabled: false
       Line Style:
         Line Width: 0.0299999993
         Value: Lines
@@ -46,7 +46,7 @@ Visualization Manager:
       Plane: XY
       Plane Cell Count: 100
       Reference Frame: <Fixed Frame>
-      Value: true
+      Value: false
     - Class: rviz/TF
       Enabled: true
       Frame Timeout: 15
@@ -96,64 +96,66 @@ Visualization Manager:
       Submaps:
         All: true
         Trajectory 0:
-          0.80: true
-          1.80: true
-          10.80: true
-          11.80: true
-          12.80: true
-          13.80: true
-          14.80: true
-          15.80: true
-          16.80: true
-          17.80: true
-          18.80: true
-          19.80: true
-          2.80: true
-          20.80: true
-          21.80: true
-          22.80: true
-          23.80: true
-          24.80: true
-          25.80: true
-          26.80: true
-          27.80: true
-          28.80: true
-          29.80: true
-          3.80: true
-          30.80: true
-          31.80: true
-          32.80: true
-          33.80: true
-          34.80: true
-          35.80: true
-          36.80: true
-          37.80: true
-          38.80: true
-          39.80: true
-          4.80: true
-          40.80: true
-          41.80: true
-          42.80: true
-          43.80: true
-          44.80: true
-          45.80: true
-          46.80: true
-          47.80: true
-          48.80: true
-          49.80: true
-          5.80: true
-          50.80: true
-          51.80: true
-          52.80: true
-          53.80: true
-          54.80: true
-          55.80: true
-          56.46: true
-          57.6: true
-          6.80: true
-          7.80: true
-          8.80: true
-          9.80: true
+          0.90: true
+          1.90: true
+          10.90: true
+          11.90: true
+          12.90: true
+          13.90: true
+          14.90: true
+          15.90: true
+          16.90: true
+          17.90: true
+          18.90: true
+          19.90: true
+          2.90: true
+          20.90: true
+          21.90: true
+          22.90: true
+          23.90: true
+          24.90: true
+          25.90: true
+          26.90: true
+          27.90: true
+          28.90: true
+          29.90: true
+          3.90: true
+          30.90: true
+          31.90: true
+          32.90: true
+          33.90: true
+          34.90: true
+          35.90: true
+          36.90: true
+          37.90: true
+          38.90: true
+          39.90: true
+          4.90: true
+          40.90: true
+          41.90: true
+          42.90: true
+          43.90: true
+          44.90: true
+          45.90: true
+          46.90: true
+          47.90: true
+          48.90: true
+          49.90: true
+          5.90: true
+          50.90: true
+          51.90: true
+          52.90: true
+          53.90: true
+          54.71: true
+          55.26: true
+          6.90: true
+          7.90: true
+          8.90: true
+          9.90: true
+          Value: true
+        Trajectory 1:
+          0.244: true
+          1.64: true
           Value: true
       Topic: /submap_list
       Tracking frame: base_link
@@ -195,6 +197,7 @@ Visualization Manager:
       Name: MarkerArray
       Namespaces:
         Trajectory 0: true
+        Trajectory 1: true
       Queue Size: 100
       Value: true
     - Class: rviz/MarkerArray
@@ -244,7 +247,7 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Scale: 60
+      Scale: 100
       Target Frame: base_footprint
       Value: TopDownOrtho (rviz)
       X: 0

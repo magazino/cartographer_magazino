@@ -18,6 +18,7 @@
 <launch>
   <param name="/use_sim_time" value="true" />
   <arg name="start_trajectory_with_default_topics" default="true" />
+  <arg name="lightweight_visualization" default="false" />
 
   <node name="cartographer" pkg="cartographer_ros"
       type="cartographer_node" args="
@@ -30,11 +31,24 @@
     <remap from="scan_2" to="/scan_rear" />
     <remap from="imu" to="/imu/data_raw_transformed" />
   </node>
-  <node name="rviz" pkg="rviz" type="rviz" required="true"
-      args="-d $(find cartographer_toru)/configuration_files/demo.rviz" />
+
+  <group unless="$(arg lightweight_visualization)" >
+    <node name="rviz" pkg="rviz" type="rviz" required="true"
+        args="-d $(find cartographer_toru)/configuration_files/demo.rviz" />
+    <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
+        type="cartographer_occupancy_grid_node" args="-resolution 0.025" />
+  </group>
+
+  <group if="$(arg lightweight_visualization)" >
+    <node name="rviz" pkg="rviz" type="rviz" required="true"
+        args="-d $(find cartographer_toru)/configuration_files/demo_light.rviz" />
+    <node name="cartographer_pbstream_map_publisher" pkg="cartographer_ros"
+        type="cartographer_pbstream_map_publisher" args="
+          -pbstream_filename $(arg load_state_filename)
+          -resolution 0.025" />
+  </group>
+
   <node name="playbag" pkg="rosbag" type="play"
       args="--clock $(arg bag_filename)" />
 
-  <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
-      type="cartographer_occupancy_grid_node" args="-resolution 0.025" />
 </launch>
