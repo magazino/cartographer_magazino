@@ -13,10 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+FROM cartographer_ros:kinetic
+
 # We require a GitHub access token to be passed.
 ARG github_token
-
-FROM cartographer_ros:kinetic
 
 # First, we invalidate the entire cache if googlecartographer/cartographer_ros has
 # changed. This file's content changes whenever master changes. See:
