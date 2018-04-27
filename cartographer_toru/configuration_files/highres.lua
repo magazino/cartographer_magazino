@@ -12,5 +12,5 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
-TRAJECTORY_BUILDER_2D.submaps.resolution = 0.025
+TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.025
 TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.min_num_points = 400

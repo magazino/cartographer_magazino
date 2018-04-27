@@ -43,7 +43,7 @@ MAP_BUILDER.use_trajectory_builder_2d = true
 MAP_BUILDER.num_background_threads = 4
 TRAJECTORY_BUILDER_2D.use_imu_data = false
 
-TRAJECTORY_BUILDER_2D.submaps.resolution = 0.05
+TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.05
 TRAJECTORY_BUILDER_2D.submaps.num_range_data = 
   1.0 * TRAJECTORY_BUILDER_2D.submaps.num_range_data
 TRAJECTORY_BUILDER_2D.max_range = 8.
