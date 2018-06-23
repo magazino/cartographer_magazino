@@ -36,6 +36,22 @@ for testing and evaluation purposes only.
 Documentation
 =============
 
+Dependencies
+------------
+
+We keep the master branch of this repository compatible with the latest 
+revision of the `cartographer_ros`_ repository.
+
+Release versions of this repository can be found here: `Releases`_.
+They are tagged according to the version number of the matching release version
+of ``cartographer_ros``.
+
+.. _cartographer_ros: https://github.com/googlecartographer/cartographer_ros
+.. _Releases: https://github.com/magazino/cartographer_magazino/releases
+
+Data
+----
+
 We currently support bagfiles recorded on Magazino TORU robots. Support for
 other platforms like SOTO may be added in the future.
 
@@ -43,6 +59,7 @@ Download links for the public datasets of Magazino robots can be found on the
 `Cartographer ROS Read the Docs site`_.
 
 .. _Cartographer ROS Read the Docs site: https://google-cartographer-ros.readthedocs.io/en/latest/data.html#magazino
+
 
 TORU
 ====
