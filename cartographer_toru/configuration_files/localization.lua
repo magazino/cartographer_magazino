@@ -12,7 +12,9 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
-TRAJECTORY_BUILDER.pure_localization = true
+TRAJECTORY_BUILDER.pure_localization_trimmer {
+  max_submaps_to_keep: 3
+}
 
 TRAJECTORY_BUILDER_2D.max_range = 8.
 TRAJECTORY_BUILDER_2D.missing_data_ray_length = 5.
