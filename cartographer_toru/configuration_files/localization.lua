@@ -13,7 +13,7 @@
 -- limitations under the License.
 
 TRAJECTORY_BUILDER.pure_localization_trimmer {
-  max_submaps_to_keep: 3
+  max_submaps_to_keep = 3
 }
 
 TRAJECTORY_BUILDER_2D.max_range = 8.
