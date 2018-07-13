@@ -45,7 +45,8 @@
     <node name="cartographer_pbstream_map_publisher" pkg="cartographer_ros"
         type="cartographer_pbstream_map_publisher" args="
           -pbstream_filename $(arg load_state_filename)
-          -resolution 0.025" />
+          -resolution 0.025
+          -collect_metrics" />
   </group>
 
   <node name="playbag" pkg="rosbag" type="play"

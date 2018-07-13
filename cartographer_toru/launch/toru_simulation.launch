@@ -19,7 +19,8 @@
   <node name="cartographer" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory $(find cartographer_toru)/configuration_files
-          -configuration_basename toru_simulation.lua"
+          -configuration_basename toru_simulation.lua
+          -collect_metrics"
       output="screen">
     <remap from="scan_1" to="/scan_front" />
     <remap from="scan_2" to="/scan_rear" />

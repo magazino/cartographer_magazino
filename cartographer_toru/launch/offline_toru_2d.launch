@@ -31,7 +31,8 @@
           -configuration_directory $(find cartographer_toru)/configuration_files
           -configuration_basenames toru.lua
           -bag_filenames $(arg bag_filenames)
-          -skip_seconds $(arg skip_seconds)"
+          -skip_seconds $(arg skip_seconds)
+          -collect_metrics"
       output="screen">
     <remap from="scan_1" to="/scan_front" />
     <remap from="scan_2" to="/scan_rear" />
