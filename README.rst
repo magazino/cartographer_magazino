@@ -78,7 +78,7 @@ Use the ``write_state`` ROS service to serialize the state to a ``.pbstream`` fi
 
 .. code-block:: bash
 
-  rosservice call /write_state "filename: 'hallway_return.pbstream'"
+  rosservice call /write_state "{filename: '$PWD/hallway_return.bag.pbstream', include_unfinished_submaps: true}"
 
 If realistic timing is not critical, you can also use the faster offline node:
 
@@ -90,7 +90,7 @@ Run the localization demo:
 
 .. code-block:: bash
 
-  roslaunch cartographer_toru demo_toru_localization.launch load_state_filename:=$(pwd)/hallway_return.pbstream bag_filename:=$(pwd)/hallway_localization.bag
+  roslaunch cartographer_toru demo_toru_localization.launch load_state_filename:=$(pwd)/hallway_return.bag.pbstream bag_filename:=$(pwd)/hallway_localization.bag
 
 .. |build| image:: https://travis-ci.org/magazino/cartographer_magazino.svg?branch=master
     :target: https://travis-ci.org/magazino/cartographer_magazino
