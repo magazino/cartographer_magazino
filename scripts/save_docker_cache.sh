@@ -22,7 +22,10 @@ set -o errexit
 set -o verbose
 set -o pipefail
 
-mkdir -p $(dirname ${DOCKER_CACHE_FILE});
-IMAGE_NAMES=$(docker history -q cartographer_magazino:${ROS_RELEASE} | grep -v '<missing>')
-docker save ${IMAGE_NAMES} | gzip > ${DOCKER_CACHE_FILE}.new
-mv ${DOCKER_CACHE_FILE}.new ${DOCKER_CACHE_FILE}
+if [[ ${TRAVIS_BRANCH} == "master" ]] &&
+    [[ ${TRAVIS_PULL_REQUEST} == "false" ]]; then
+  mkdir -p $(dirname ${DOCKER_CACHE_FILE});
+  IMAGE_NAMES=$(docker history -q cartographer_magazino:${ROS_RELEASE} | grep -v '<missing>')
+  docker save ${IMAGE_NAMES} | gzip > ${DOCKER_CACHE_FILE}.new
+  mv ${DOCKER_CACHE_FILE}.new ${DOCKER_CACHE_FILE}
+fi
