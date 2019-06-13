@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM cartographer_ros:indigo
+FROM cartographer_ros:melodic
 
 # We require a GitHub access token to be passed.
 ARG github_token
