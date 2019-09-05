@@ -40,7 +40,7 @@ options = {
 }
 
 MAP_BUILDER.use_trajectory_builder_2d = true
-MAP_BUILDER.num_background_threads = 4
+MAP_BUILDER.num_background_threads = 8
 TRAJECTORY_BUILDER_2D.use_imu_data = false
 
 TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.05

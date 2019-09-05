@@ -21,6 +21,7 @@
   <arg name="lightweight_visualization" default="false" />
 
   <node name="cartographer" pkg="cartographer_ros"
+      launch-prefix="valgrind --tool=massif --massif-out-file='$(arg massif_out_file)'"
       type="cartographer_node" args="
           -configuration_directory $(find cartographer_toru)/configuration_files
           -configuration_basename toru_localization.lua
@@ -32,24 +33,7 @@
     <remap from="imu" to="/imu/data_raw_transformed" />
   </node>
 
-  <group unless="$(arg lightweight_visualization)" >
-    <node name="rviz" pkg="rviz" type="rviz" required="true"
-        args="-d $(find cartographer_toru)/configuration_files/demo.rviz" />
-    <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
-        type="cartographer_occupancy_grid_node" args="-resolution 0.025" />
-  </group>
-
-  <group if="$(arg lightweight_visualization)" >
-    <node name="rviz" pkg="rviz" type="rviz" required="true"
-        args="-d $(find cartographer_toru)/configuration_files/demo_light.rviz" />
-    <node name="cartographer_pbstream_map_publisher" pkg="cartographer_ros"
-        type="cartographer_pbstream_map_publisher" args="
-          -pbstream_filename $(arg load_state_filename)
-          -resolution 0.025
-          -collect_metrics" />
-  </group>
-
   <node name="playbag" pkg="rosbag" type="play"
-      args="--clock $(arg bag_filename)" />
+      args="--clock $(arg bag_filename) --delay 15" />
 
 </launch>
